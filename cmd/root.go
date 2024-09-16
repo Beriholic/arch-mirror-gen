@@ -28,6 +28,7 @@ var rootCmd = &cobra.Command{
 		list, err := mirror.GetChinaMirrorList()
 		if err != nil {
 			fmt.Printf("获取镜像列表失败: %v\n", err)
+			return
 		}
 
 		err = file.WriteFileToPacmanMirrorlist(list)

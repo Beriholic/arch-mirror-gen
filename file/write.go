@@ -1,11 +1,15 @@
 package file
 
 import (
+	"fmt"
 	"os"
 	"time"
 )
 
 func WriteFileToPacmanMirrorlist(mirrorList []string) error {
+	if len(mirrorList) == 0 {
+		return fmt.Errorf("镜像列表为空")
+	}
 	curTime := time.Now().Format("2006-01-02 15:04:05")
 
 	header := "#######################################################\n" +
