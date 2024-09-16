@@ -12,3 +12,8 @@ make install
 ```bash
 go install github.com/Beriholic/arch-mirror-gen@latest
 ```
+
+使用 aur 安装
+```bash
+[yay/paur] -S arch-mirror-gen
+```
